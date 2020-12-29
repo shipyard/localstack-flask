@@ -10,6 +10,7 @@ services:
       DATABASE_URL: 'postgres://obscure-user:obscure-password@postgres/app'
       DEV: ${DEV}
       FLASK_DEBUG: '1'
+      LOCALSTACK_HOST: 'localstack'
     volumes:
       - './filesystem/entrypoints:/entrypoints:ro'
       - './migrations:/srv/migrations'
@@ -25,6 +26,7 @@ services:
       DATABASE_URL: 'postgres://obscure-user:obscure-password@postgres/app'
       DEV: ${DEV}
       FLASK_DEBUG: '1'
+      LOCALSTACK_HOST: 'localstack'
     command: '/entrypoints/worker.sh'
     volumes:
       - './filesystem/entrypoints:/entrypoints:ro'
@@ -47,6 +49,12 @@ services:
     image: 'redis:5.0-alpine'
     ports:
       - '6379'
+
+  localstack:
+    image: 'localstack/localstack'
+    ports:
+      - '4566:4566'
+      - '4571:4571'
 
 volumes:
   postgres:

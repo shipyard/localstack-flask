@@ -16,6 +16,8 @@ cryptography = "^2.8"
 redis = "^3.4.1"
 flask-shell-ipython = "^0.4.1"
 psycopg2 = "^2.8.4"
+boto3 = "^1.16.44"
+localstack-client = "^1.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
