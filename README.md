@@ -1,6 +1,6 @@
-# The Flask Template &middot; [![Version Badge](https://img.shields.io/badge/version-1.0.0-brightgreen)](#)
+# The Flask Template Leveraging LocalStack for simulated s3 filestore&middot; [![Version Badge](https://img.shields.io/badge/version-1.0.0-brightgreen)](#)
 
-A basic Flask starter project to get started with Docker Compose and Shipyard.
+A basic Flask starter project to get started with Docker Compose, LocalStack and Shipyard.
 
 ## Includes
 
@@ -8,6 +8,7 @@ A basic Flask starter project to get started with Docker Compose and Shipyard.
 - uWSGI entrypoint
 - Celery (with example heartbeat task configured)
 - Flask-SQLAlchemy
+- [LocalStack](https://github.com/localstack/localstack)
 
 ## Dependencies
 
@@ -17,5 +18,6 @@ A basic Flask starter project to get started with Docker Compose and Shipyard.
 ## Getting Started
 
 - Run `make develop` at the root of this project.
-- Visit the app at http://localhost:8080.
+- Visit the app at http://localhost:8080/file to list objects in LocalStack s3 bucket
+- Visit http://localhost:8080/file/create to add test object
 - Make your code changes! The app will reload whenever you save.
