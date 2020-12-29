@@ -18,6 +18,6 @@ A basic Flask starter project to get started with Docker Compose, LocalStack and
 ## Getting Started
 
 - Run `make develop` at the root of this project.
-- Visit the app at http://localhost:8080/file to list objects in LocalStack s3 bucket
-- Visit http://localhost:8080/file/create to add test object
+- Visit the app at http://localhost:8080/files to list objects in LocalStack s3 bucket
+- Visit http://localhost:8080/files/create to add test object
 - Make your code changes! The app will reload whenever you save.
