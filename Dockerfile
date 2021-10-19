@@ -30,6 +30,7 @@ RUn apk add --update --no-cache \
     #cd .. && rm -rf watchman
 
 # Install poetry
+RUN pip install --upgrade pip
 RUN pip install poetry
 
 # Create an app user, prepare permissions, and run as the user
@@ -40,7 +41,6 @@ USER app
 
 # Install Python dependencies
 ADD pyproject.toml poetry.lock ./
-RUN pip install --upgrade pip
 RUN poetry install
 
 # Add the project
