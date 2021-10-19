@@ -40,6 +40,7 @@ USER app
 
 # Install Python dependencies
 ADD pyproject.toml poetry.lock ./
+RUN pip install --upgrade pip
 RUN poetry install
 
 # Add the project
